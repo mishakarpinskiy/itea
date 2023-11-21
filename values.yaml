@@ -1,0 +1,8 @@
+app_name: itea-hw
+env: production
+replicas: 2
+frontend_image: kravchuchka/frontend
+frontend_container_port: 80
+backend_image: kravchuchka/backend
+backend_container_port: 3000
+port: 80

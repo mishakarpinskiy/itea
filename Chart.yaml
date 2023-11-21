@@ -1,0 +1,4 @@
+apiVersion: v2
+name: itea-hw-chart
+description: helm chart for deploy, autoscaler hpa and services
+version: 0.1.0

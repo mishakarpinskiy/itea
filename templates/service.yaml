@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Release.Name }}-service"
+  labels:
+    app: {{ .Values.app_name }}
+    env: {{ .Values.env }}
+spec:
+  selector:
+    project: "{{ .Release.Name }}-project"
+  ports:
+    - name: {{ .Values.listener_name }}
+      protocol: TCP
+      port: {{ .Values.port }}
+      targetPort: {{ .Values.frontend_container_port }}
